@@ -20,6 +20,10 @@ jobs:
   # Build for wasm
   release-wasm:
     runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      pages: write
+      id-token: write
 
     steps:
       - uses: olegtarasov/get-tag@v2.1.3
@@ -89,7 +93,6 @@ jobs:
     runs-on: ubuntu-latest
     
     if: false
-
 
     steps:
       - uses: olegtarasov/get-tag@v2.1.3
